@@ -1,0 +1,70 @@
+{
+  "locales":[
+    {
+      "name" : "Français",
+      "texts": {
+        "menu_start": "jouer",
+        "menu_help": "aide",
+        "menu_credits": "crédits",
+        "menu_lang": "langage",
+        "help_move": "",
+        "help_obstacles": "éviter les obstacles",
+        "help_enemies": "tuer les ennemis",
+        "help_stars": "collecter des étoiles",
+        "help_powerups": "collecter des power-ups",
+        "help_continue": "cliquer pour continuer",
+        "game_resume": "continuer",
+        "game_upgrades": "améliorations",
+        "game_menu": "menu",
+        "sound_master": "principal",
+        "sound_music": "musique",
+        "sound_sfx": "effets",
+        "sound_done": "retour",
+        "endgame_record": "nouveau record !",
+        "endgame_score": "score",
+        "endgame_previous": "précédent",
+        "endgame_points": "points d'amélioration",
+        "endgame_continue": "continuer",
+        "upgrade_title": "améliorations",
+        "upgrade_available": "points disponibles",
+        "upgrade_hull": "coque",
+        "upgrade_damage": "dommages",
+        "upgrade_shield": "bouclier",
+        "upgrade_point_suffix": "P"
+      }
+    },
+    {
+      "name" : "English",
+      "texts": {
+        "menu_start": "start",
+        "menu_help": "help",
+        "menu_credits": "credits",
+        "menu_lang": "language",
+        "help_move": "",
+        "help_obstacles": "avoid obstacles",
+        "help_enemies": "kill enemies",
+        "help_stars": "collect stars",
+        "help_powerups": "collect power-ups",
+        "help_continue": "tap to continue",
+        "game_resume": "resume",
+        "game_upgrades": "upgrades",
+        "game_menu": "menu",
+        "sound_master": "master",
+        "sound_music": "music",
+        "sound_sfx": "effects",
+        "sound_done": "back",
+        "endgame_record": "new record !",
+        "endgame_score": "score",
+        "endgame_previous": "previous",
+        "endgame_points": "upgrade points",
+        "endgame_continue": "continue",
+        "upgrade_title": "upgrades",
+        "upgrade_available": "points availables",
+        "upgrade_hull": "hull",
+        "upgrade_damage": "damage",
+        "upgrade_shield": "shield",
+        "upgrade_point_suffix": "P"
+      }
+    }
+  ]
+}
