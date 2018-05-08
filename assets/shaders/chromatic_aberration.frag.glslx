@@ -1,0 +1,18 @@
+#ifdef GL_ES
+precision mediump float;
+#endif
+
+uniform sampler2D tex0;
+uniform float strength;
+uniform vec2 resolution;
+uniform vec3 direction;
+varying vec2 tcoord;
+varying vec4 color;
+
+void main() {
+    vec4 texcolor = texture2D(tex0, tcoord);
+    float r = texture2D(tex0, tcoord + vec2(cos(direction.x) * strength / resolution.x, sin(direction.x) * strength / resolution.y)).r;
+    float g = texture2D(tex0, tcoord + vec2(cos(direction.y) * strength / resolution.x, sin(direction.y) * strength / resolution.y)).g;
+    float b = texture2D(tex0, tcoord + vec2(cos(direction.z) * strength / resolution.x, sin(direction.z) * strength / resolution.y)).b;
+    gl_FragColor = vec4(r, g, b, texcolor.a);
+}
