@@ -1,0 +1,42 @@
+<template>
+    <style innerhtml.bind="verticalImageStyle">
+
+    </style>
+    <div class="screen projects" ref="container" scroll-transform.bind="index" scroll-target.bind="index" scroll-next.bind="index">
+    <div class="project-base-title"><span>Projets / expérimentations</span></div>
+      <div class="project" ref="projectElm">
+        <div class="cover-wrapper" ref="cover" polygon-transition="orientation: vertical; direction:1">
+            <div class="project-cover" repeat.for="project of projectData">
+                  <div ref="eachImageWrapper[$index]" class.bind="project.coverClass" data-simple-slider>
+                      <img  class="cover-image" repeat.for="img of project.cover" src.bind="img" alt=""/>
+                      <span  class="cover-control-container">
+                        <span class="cover-control-bar">
+                          <span class="cover-control" repeat.for="img of project.cover" data-project.bind="project" data-index.bind="$index" click.delegate="changeSlider($event, project, $index)"></span>
+                        </span>
+                      </span>
+                  </div>
+            </div>
+        </div>
+        <div class="project-desc">
+          <div class="title-wrapper" ref="title" polygon-transition="orientation: horizontal; direction:1">
+              <div class="project-title" repeat.for="project of projectData" >
+                <div class="btn" click.delegate="previousProject()">&lt;</div>
+                <span>${project.name}</span>
+                <div class="btn" click.trigger="nextProject()">&gt;</div>
+              </div>
+          </div>
+          <div class="description-wrapper" ref="description" polygon-transition="orientation: horizontal; direction:-1">
+              <div class="description" repeat.for="project of projectData">
+                <div class="desc-content" >
+                  <div class="desc-top" innerhtml.bind="project.description1"></div>
+                  <div class="desc-bot">
+                      <h2>Compétences développées</h2>
+                      <span innerhtml.bind="project.description2"></span>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>

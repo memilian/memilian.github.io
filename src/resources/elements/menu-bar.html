@@ -1,0 +1,9 @@
+<template >
+  <div class="menu" ref="menu">
+    <div repeat.for="t of titles" class="menu-item" click.trigger="goToScreen(t.currentViewModel.index)"> ${t.currentViewModel.displayTitle}</div>
+  </div>
+  <div class="progress">
+    <div class="progress-foreground" ref="foreground"></div>
+    <div class="progress-current" ref="current"></div>
+  </div>
+</template>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mathieu Emilian - Developpeur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <style id="loader-style">
+      body, html, .loader{
+        width: 100%;
+        height: 100%;
+        overflow:hidden;
+        margin: 0;
+      }
+      .loader{
+        position: fixed;
+        top:0;
+        left:0;
+        border: 1px solid transparent;
+        background-color: rgba(66,67,66, 1);
+        z-index: 1000;
+        color: white;
+        transition: all 0.5s ease-out
+      }
+      .circle-wrapper, .loader-wrapper{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      
+      .circle-segment{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 15px;
+        border: 1px solid transparent;
+        background-color: #0c9eff;
+        transition: all 1.0s ease-in-out;
+        transform-origin: top center;
+        box-shadow: 0 0 5px 0 #0c9effaa;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        opacity: 1;
+      }
+    </style>
+    <script>
+        var pbProgress = 0;
+        var expectedProgressCalls = 4;
+        var progressCalls = 0;
+        advanceProgress = function(){
+          progressCalls++;
+          pbProgress = progressCalls / expectedProgressCalls;
+        }
+        var container = document.querySelector('.circle-wrapper');
+        var watchId = null;
+        var animId = null;
+        var watchReady = function(){
+          container = document.querySelector('.circle-wrapper');
+          if(container != null){
+            var segments = document.querySelectorAll('.circle-segment');
+            var deltaAngle = 360 / segments.length;
+            for(var i = 0; i < segments.length; i++){
+              var s = segments[i];
+              s.style.transform = "rotateZ("+(i * deltaAngle)+"deg)translateX(40px)rotateZ(-90deg)";
+            }
+            var totalAngle = 0;
+            var lastCircleIdx = 0;
+            var animateLoader = function(){
+              if(container.parentElement.parentElement.parentElement == null){
+                document.body.appendChild(container.parentElement.parentElement);
+              }
+
+              totalAngle += 0.1;
+              container.style.transform = "rotateZ("+totalAngle+"deg)";
+
+              if(Math.random() < 0.65){
+                animId = window.requestAnimationFrame(animateLoader);
+                return;
+              }
+              lastCircleIdx++;
+              if(lastCircleIdx >= segments.length) lastCircleIdx = 0;
+              lastCircleIdx = ~~(Math.random() * segments.length);
+              var s = segments[lastCircleIdx];
+              if(parseFloat(s.style.height) >=20)
+                s.style.height = "15px";
+              else
+                s.style.height = 30 + Math.random() * 30 + "px";
+              animId = window.requestAnimationFrame(animateLoader);
+            }
+            animId = window.requestAnimationFrame(animateLoader);
+            clearInterval(watchId);
+          }
+        }
+        watchId = setInterval(watchReady, 25);
+        var stopLoader = function(){
+          document.getElementById('loader-style').remove();
+          var loader = document.querySelector('.loader');
+          if(loader != null){
+            document.querySelector('.loader').remove();
+          }
+          window.cancelAnimationFrame(animId);
+        }
+        
+      </script>
+  </head>
+  
+  
+  <body aurelia-app="main">
+      <div class="loader active">
+          <div class="loader-wrapper">
+            <span class="circle-wrapper">
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+                <span class="circle-segment"></span>
+              </span>
+            </div>
+          </div>
+    <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+    
+  </body>
+  
+</html>
