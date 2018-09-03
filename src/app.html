@@ -1,0 +1,9 @@
+<template>
+  <require from="styles/style.css"></require>
+  <div class="content" ref="content" >
+    <template containerless repeat.for="vm of screenVms">
+      <compose view-model.bind="vm" model.bind="{index:$index+1}" view-model.ref="screenRefs[$index]"></compose>
+    </template>
+  </div>
+  <menu-bar titles.bind="screenRefs"></menu-bar>
+</template>

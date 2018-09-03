@@ -1,0 +1,15 @@
+<template containerless>
+  <div class="project" ref="projectElm">
+    <div class="project-cover" ref="coverElm">
+      <img src.bind="data.project.cover" alt=""/>
+    </div>
+    <div class="project-desc">
+      <div class="project-title" ref="titleElm">
+        <div class="btn" click.delegate="previousProject()">&lt;</div>
+        <span>${data.project.name}</span>
+        <div class="btn" click.trigger="nextProject()">&gt;</div>
+      </div>
+      <div class="description" innerhtml.bind="data.project.description" ref="descriptionElm"></div>
+    </div>
+  </div>
+</template>

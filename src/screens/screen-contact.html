@@ -1,0 +1,26 @@
+<template>
+  <div class="screen" scroll-transform.bind="index" scroll-target.bind="index" scroll-next.bind="index">
+    <div class="form-container">
+      <form class="form" action="https://formspree.io/mathieu.emilian@gmail.com" method="POST">
+        <span class="form-row">
+            <input type="text" name="fname" placeholder="Prénom" value.bind="fname & validate">
+            <span class="form-error-full" innerhtml.bind="fnameError"></span>
+            <input type="text" name="lname" placeholder="Nom" value.bind="lname & validate">
+            <span class="form-error-full moveright" innerhtml.bind="lnameError"></span>
+        </span>
+        <span class="form-row">
+          <input type="email" name="email" placeholder="Votre adresse email" value.bind="email & validate">
+          <span class="form-error-full" innerhtml.bind="emailError"></span>
+        </span>
+        <span class="form-row">
+          <textarea name="message" cols="30" rows="10" placeholder="Message" value.bind="message & validate"></textarea>
+          <span class="form-error-full movedown" innerhtml.bind="messageError"></span>
+        </span>
+        <span class="form-row">
+          <input type="submit" disabled.bind="!canSubmit">
+        </span>
+      </form>
+      </div>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,21 @@
+<template>
+  <div class="screen" ref="container" scroll-transform.bind="index" scroll-target.bind="index" scroll-next.bind="index">
+    <span class="screen-desc-container">
+      <console-section>
+      </console-section>
+      <span class="portrait-container">
+        <span class="portrait-crop" ref="portraitCrop">
+          <img src="img/portrait.jpg" alt="" ref="portrait">
+        </span>
+      </span>
+      <span class="chrome-warning" ref="chromeWarning">
+        Ce site fonctionne de façon optimale dans le navigateur google chrome
+      </span>
+      <span class="show-keys" ref="showKeys">
+        <div><span class="key up"><span>&lt;</span></span></div>
+        <div><span class="key left"><span>&lt;</span></span><span class="key down"><span>&lt;</span></span><span class="key right"><span>&gt;</span></span></div>
+        <div>Vous pouvez naviguer avec les flèches</div>
+      </span>
+    </span>
+  </div>
+</template>
