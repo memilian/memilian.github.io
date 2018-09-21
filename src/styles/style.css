@@ -8,7 +8,7 @@ html, body
 
 .content
   width: 100%
-  overflow-x: hidden
+  overflow: hidden
 
 .console 
   font-family: roboto mono
@@ -346,15 +346,15 @@ menu-bar .menu-item:hover
   display: flex
 
 .portrait-container img
-  width: 320px
+  width: calc(100vw * 0.2 + 15px)
   position: relative
   filter: blur(50px)hue-rotate(360deg)
-  transition: all 1s ease-out
+  transition: filter 1s ease-out
 
 .portrait-crop
   border-radius: 100%
-  width: 300x
-  height: 300px
+  width: calc(100vw * 0.2)
+  height: calc(100vw * 0.2)
   overflow: hidden
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2)
   position: relative
@@ -362,7 +362,7 @@ menu-bar .menu-item:hover
   position: relative
   z-index: 800
   opacity: 0
-  transition: all 1s ease-in
+  transition: opacity 1s ease-in
 
 .form-container
   width: 100%
@@ -456,7 +456,7 @@ textarea
   left: 0
 
 .show-keys
-  width: 360px
+  width: calc(100vw * 0.2 + 25px)
   max-height: 200px
   border: 1px solid #0c9eff
   border-radius: 15px
@@ -484,6 +484,9 @@ textarea
   margin: 3px
   text-align: center
 
+.contact-title
+  font-size: 20px
+
 .key.up span
   transform: rotateZ(90deg)translate(1px, -1px)
   display: inline-block
@@ -494,7 +497,9 @@ textarea
   display: inline-block
   margin-left: -2px
   
-
+@media all and (max-width: 768px)
+  .show-keys
+    display: none
 @media all and (max-width: 1361px)
   .project-desc
     lost-column: 1.2/3 1

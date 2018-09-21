@@ -30,7 +30,7 @@ export class ScreenProject{
       },
       {
         name : "Yasis",
-        description1 : "<p>Un jeu web de type shooter, développé en <strong>Haxe</strong>.</p><p>Le projet a été réalisé en mode agile, avec plusieurs courtes itérations.</p>",
+        description1 : "<p>Un jeu web de type shooter, développé en <strong>Haxe / Javascript</strong>.</p><p>Le projet a été réalisé en mode agile, avec plusieurs courtes itérations.</p>",
         description2 : "<ul><li>Paradigme entité / composants</li><li>Fonctionnement et optimisation de la pipeline graphique</li><li>Shaders GLSL</li><li>Game design</li><li>Haxe</li></ul>",
         coverClass: "image-wrapper vertical",
         cover: ["img/yas0.jpg", "img/yas1.jpg", "img/yas2.jpg", "img/yas3.jpg", "img/yas4.jpg", "img/yas5.jpg", "img/yas6.jpg", "img/yas7.jpg"]
