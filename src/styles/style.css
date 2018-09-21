@@ -358,7 +358,7 @@ menu-bar .menu-item:hover
   overflow: hidden
   box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.2)
   position: relative
-  margin: 0 auto
+  margin: -35px auto
   position: relative
   z-index: 800
   opacity: 0
