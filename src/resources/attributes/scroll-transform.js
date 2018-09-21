@@ -11,6 +11,7 @@ export class ScrollTransform {
   constructor(element, lerp) {
     this.lerpService = lerp;
     this.element = element;
+    
     window.addEventListener('scroll', function(event){
       let y = (window.pageYOffset || document.scrollTop)  - (document.clientTop || 0) || 0;
       let ratio = (1 + y / (window.innerHeight)) - this.index;

@@ -15,9 +15,9 @@ export class ScreenDesc {
       this.portraitCrop.style.opacity = 1;
       this.portrait.style.filter = "blur(0px)";
       this.showKeys.style.opacity = 1;
-      if(!this.isChrome){
-        this.chromeWarning.style.opacity = 1;
-      }
+      // if(!this.isChrome){
+      //   this.chromeWarning.style.opacity = 1;
+      // }
     }.bind(this));
   }
 

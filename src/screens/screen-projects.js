@@ -16,15 +16,15 @@ export class ScreenProject{
     this.projectData = [
       {
         name : "The underworld",
-        description1 : "<p>Un mod pour le jeu <strong>Minecraft</strong>. Le mod (plugin) ajoute une dimension souterraine au jeu, un boss, des ennemis et de nombreux objets.</p><p>Ce projet m'a donné goût au développement et m'a beaucoup appris.</p>",
+        description1 : "<p>Un mod pour le jeu <strong>Minecraft</strong>. Le mod (plugin) ajoute une dimension souterraine au jeu, un boss, des ennemis et de nombreux objets.</p>",
         description2 : "<ul><li>POO en JAVA</li><li>Naviguer dans une grande base de code</li><li>Résolution de bogues</li><li>Génération procédurale</li></ul>",
         coverClass: "image-wrapper",
         cover: ["img/mc1.jpg", "img/mc2.jpg", "img/mc4.jpg"]
       },
       {
         name : "Java Voxel engine",
-        description1 : "<p>Un Voxel engine en <strong>Java</strong>, réalisé avec le moteur de jeu JMonkey 3. Affiche un terrain infini généré de façon procédurale.</p><p> Le moteur supporte : </p><ul><li>Ajout / suppression de blocks dans un volume</li><li>Générations de différents types de terrain</li><li>Ambient occlusion par voxel</li><li>Aucune limite de construction verticale</li></ul>",
-        description2 : "<ul><li>POO en Java</li><li>Fonctionnement de la pipeline graphique</li><li>Programmation concurrente</li><li>Shaders GLSL</li><li>Concepts de génération procédurale</li></ul>",
+        description1 : "<p>Un Voxel engine en <strong>Java</strong>, réalisé avec le moteur de jeu JMonkey 3. Affiche un terrain infini généré de façon procédurale.</p><p> Le moteur développé supporte : </p><ul><li>Ajout / suppression de blocks dans un volume</li><li>Générations de différents types de terrain</li><li>Ambient occlusion par voxel</li><li>Aucune limite de construction verticale</li></ul>",
+        description2 : "<ul><li>POO en Java</li><li>Développement 3d temps réel</li><li>Fonctionnement de la pipeline graphique</li><li>Programmation concurrente</li><li>Shaders GLSL</li><li>Concepts de génération procédurale</li></ul>",
         coverClass: "image-wrapper",
         cover: ["img/vox1.jpg", "img/vox2.jpg", "img/vox3.jpg", "img/vox4.jpg", "img/vox5.jpg"]
       },
@@ -37,7 +37,7 @@ export class ScreenProject{
       },
       {
         name : "Game Jam",
-        description1 : "<p>Jeu intitulé <em>\"Save your diamond factory\"</em>, intégralement réalisé en 72h lors de l'évènement Ludum Dare 40 ayant pour thème : </p><p> <em>\"The more you have, the worse it gets\".</em></p><br/><p>Le jeu mixe les genres de Tower Defense et de jeu incrémental.</p>",
+        description1 : "<p>Jeu web intitulé <em>\"Save your diamond factory\"</em>, intégralement réalisé en 72h lors de l'évènement Ludum Dare 40 ayant pour thème : </p><p> <em>\"The more you have, the worse it gets\".</em></p><br/><p>Le jeu mixe les genres de Tower Defense et de jeu incrémental.</p>",
         description2 : "<ul><li>Organisation</li><li>Prototypage dans un court laps de temps</li><li>Paradigme entité / composants</li><li>Game design</li></ul>",
         coverClass: "image-wrapper",
         cover: ["img/ld40.jpg"]

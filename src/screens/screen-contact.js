@@ -49,7 +49,6 @@ export class ScreenContact{
             this[error.propertyName+"Error"] = error.message;
           }
         });
-    console.log(this.canSubmit);
   }
 
   activate(data){
